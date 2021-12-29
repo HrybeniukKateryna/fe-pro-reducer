@@ -5,21 +5,21 @@ function capitalize(string) {
 };
 
 
-function reducer(string, action) {
+function reducer(input, action) {
   let functionResult;
 
   switch (action) {
 
     case 'capitalize':
-      functionResult = capitalize(string);
+      functionResult = capitalize(input);
       break;
 
     case 'upperCase':
-      functionResult = string.toUpperCase();
+      functionResult = input.toUpperCase();
       break;
 
     case 'lowerCase':
-      functionResult = string.toLowerCase();
+      functionResult = input.toLowerCase();
       break;
 
   }
