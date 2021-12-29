@@ -11,21 +11,19 @@ function reducer(string, action) {
   let functionResult;
 
   switch (action) {
-  
-    case 'capitalize': 
-    functionResult = capitalize(string);
-    break;
-    
-      case 'toUpperCase': 
+
+    case 'capitalize':
+      functionResult = capitalize(string);
+      break;
+
+    case 'toUpperCase':
       functionResult = string.toUpperCase();
       break;
-    
-      case 'toLowerCase': 
+
+    case 'toLowerCase':
       functionResult = string.toLowerCase();
       break;
 
-      default:
-        functionResult = string;
   }
   return functionResult;
 
