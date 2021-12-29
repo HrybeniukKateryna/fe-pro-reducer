@@ -18,6 +18,7 @@ function reducer(input, action) {
       break;
   }
   return functionResult;
+  
 }
 
 
