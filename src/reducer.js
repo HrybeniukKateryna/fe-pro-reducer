@@ -1,4 +1,10 @@
 
+function capitalize(string) {
+  let a = string.split(' ');
+  return str.replace(/(^|\s)\S/g, function(a) {return a.toUpperCase()});
+};
+
+
 function reducer(string, action) {
   let functionResult;
 
@@ -8,11 +14,11 @@ function reducer(string, action) {
       functionResult = capitalize(string);
       break;
 
-    case 'toUpperCase':
+    case 'upperCase':
       functionResult = string.toUpperCase();
       break;
 
-    case 'toLowerCase':
+    case 'lowerCase':
       functionResult = string.toLowerCase();
       break;
 
@@ -21,13 +27,5 @@ function reducer(string, action) {
 
 };
 
-function capitalize(string) {
-  let result = string.split(' ');
-  let newArray = result.map(function (item) {
-    return item.charAt(0).toUpperCase() + item.slice(1);
-  });
-
-  return newArray.join(' ');
-};
 
 module.exports = reducer;
