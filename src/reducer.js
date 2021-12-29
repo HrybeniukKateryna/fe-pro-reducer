@@ -7,7 +7,7 @@ function capitalize(string) {
   return newArray.join(' ');
 };
 
-function reducer(_input, action) {
+function reducer(string, action) {
   let functionResult;
 
   switch (action) {
@@ -16,11 +16,11 @@ function reducer(_input, action) {
     functionResult = capitalize(string);
     break;
     
-      case 'upperCase': 
+      case 'toUpperCase': 
       functionResult = string.toUpperCase();
       break;
     
-      case 'lowerCase': 
+      case 'toLowerCase': 
       functionResult = string.toLowerCase();
       break;
 
@@ -29,6 +29,6 @@ function reducer(_input, action) {
   }
   return functionResult;
 
-}
+};
 
 module.exports = reducer;
