@@ -7,7 +7,7 @@ function capitalize(string) {
   return newArray.join(' ');
 };
 
-function reducer(input, action) {
+function reducer(_input, action) {
   let functionResult;
 
   switch (action) {
