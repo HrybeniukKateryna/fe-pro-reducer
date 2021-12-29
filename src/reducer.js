@@ -9,17 +9,26 @@ function capitalize(string) {
 
 function reducer(input, action) {
   let functionResult;
+
   switch (action) {
-    case 'capitalize': functionResult = capitalize(string);
+  
+    case 'capitalize': 
+    functionResult = capitalize(string);
+    break;
+    
+      case 'upperCase': 
+      functionResult = string.toUpperCase();
       break;
-    case 'upperCase': functionResult = string.toUpperCase();
+    
+      case 'lowerCase': 
+      functionResult = string.toLowerCase();
       break;
-    case 'lowerCase': functionResult = string.toLowerCase();
-      break;
+
+      default:
+        functionResult = string;
   }
   return functionResult;
-  
-}
 
+}
 
 module.exports = reducer;
